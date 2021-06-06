@@ -1,0 +1,37 @@
+﻿@page
+@model RentHouse.Pages.home.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>House</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.House.HName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.House.HName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.House.Specification)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.House.Specification)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.House.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.House.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.House.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
